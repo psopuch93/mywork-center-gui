@@ -1,0 +1,21 @@
+# packages in environment at /home/szopen/anaconda3/envs/gui:
+#
+# Name                    Version                   Build  Channel
+ca-certificates           2020.10.14                    0    anaconda
+certifi                   2020.6.20                py38_0    anaconda
+ld_impl_linux-64          2.33.1               h53a641e_7    anaconda
+libedit                   3.1.20191231         h14c3975_1    anaconda
+libffi                    3.3                  he6710b0_2    anaconda
+libgcc-ng                 9.1.0                hdf63c60_0    anaconda
+libstdcxx-ng              9.1.0                hdf63c60_0    anaconda
+ncurses                   6.2                  he6710b0_1    anaconda
+openssl                   1.1.1h               h7b6447c_0    anaconda
+pip                       20.2.4                   py38_0    anaconda
+python                    3.8.5                h7579374_1    anaconda
+readline                  8.0                  h7b6447c_0    anaconda
+setuptools                50.3.0           py38hb0f4dca_1    anaconda
+sqlite                    3.33.0               h62c20be_0    anaconda
+tk                        8.6.10               hbc83047_0    anaconda
+wheel                     0.35.1                     py_0    anaconda
+xz                        5.2.5                h7b6447c_0    anaconda
+zlib                      1.2.11               h7b6447c_3    anaconda
