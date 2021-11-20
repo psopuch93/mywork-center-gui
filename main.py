@@ -1,6 +1,7 @@
 import tkinter
 from tkinter import *
 from tkinter import ttk
+from tkinter.ttk import *
 
 
 import tkinter as tk
@@ -10,6 +11,7 @@ class App():
 
     def __init__(self):
         self.root = tk.Tk()
+        name_var = tk.StringVar()
 
         tabControl = ttk.Notebook(self.root)
         tab1 = ttk.Frame(self.root)
@@ -40,7 +42,7 @@ class App():
                                         pady=30)
 
         tv = ttk.Treeview(tab1,
-                          columns=(1 , 2, 3, 4),
+                          columns=(1 , 2, 3, 4, 5),
                           show='headings',
                           height=8)
         tab1.grid_columnconfigure(0, weight=1)
@@ -51,12 +53,35 @@ class App():
         tv.column(1,width=20, minwidth=5)
         tv.heading(2, text="Name")
         tv.column(2, width=100, minwidth=50)
-        tv.heading(3, text="Day of birth")
-        tv.column(3, width=100)
-        tv.heading(4, text="Student status")
-        tv.column(4, width=50)
+        tv.heading(3, text="Lastname")
+        tv.column(3, width=100, minwidth=50)
+        tv.heading(4, text="Day of birth")
+        tv.column(4, width=100)
+        tv.heading(5, text="Student status")
+        tv.column(5, width=50)
 
-        add_employee_button = tkinter.Button(tab1, text="Add new employee")
+        def new_window():
+
+            newWindow = Toplevel(self.root)
+            newWindow.title("New Window")
+            newWindow.geometry("300x300+1000+500")
+            Label(newWindow,
+                  text="This is a new window").pack()
+
+            id_entry = tk.Entry(newWindow,font=('calibre',10,'normal'))
+            id_entry.config(state=DISABLED)
+            id_entry_label = tk.Label(newWindow, text='ID: ', font=('calibre', 10, 'bold'))
+            name_entry = tk.Entry(newWindow, font=('calibre',10,'normal'))
+            name_entry_label = tk.Label(newWindow, text='Name: ', font=('calibre', 10, 'bold'))
+
+            id_entry_label.pack()
+            id_entry.pack()
+
+            name_entry_label.pack()
+            name_entry.pack()
+
+
+        add_employee_button = tkinter.Button(tab1, text="Add new employee", command = new_window)
         add_employee_button.grid()
 
     def run(self):
